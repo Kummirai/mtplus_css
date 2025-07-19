@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables Challenge</title>
+    <style>
+        /*
+        CSS VARIABLES (CUSTOM PROPERTIES) CHALLENGE
+        ==========================================
+
+        OBJECTIVE: Complete the CSS using CSS Custom Properties to create a themed card layout
+
+        INSTRUCTIONS:
+        1. Define global CSS variables in the :root selector for:
+           - Primary color: #3498db
+           - Secondary color: #e74c3c
+           - Background color: #f8f9fa
+           - Text color: #2c3e50
+           - Card shadow: 0 4px 6px rgba(0, 0, 0, 0.1)
+           - Border radius: 8px
+           - Font family: 'Arial, sans-serif'
+           - Spacing unit: 16px
+
+        2. Create a dark theme by overriding variables in a .dark-theme class:
+           - Primary color: #2980b9
+           - Secondary color: #c0392b
+           - Background color: #2c3e50
+           - Text color: #ecf0f1
+           - Card shadow: 0 4px 6px rgba(0, 0, 0, 0.3)
+
+        3. Use the variables to style:
+           - Body background and text color
+           - Card containers with background, shadow, and border radius
+           - Buttons with primary/secondary colors
+           - Headings and text elements
+           - Spacing using the spacing unit variable
+
+        4. Create hover effects that modify the variables locally
+
+        5. Make the theme toggle button functional using the variables
+
+        BONUS CHALLENGES:
+        - Use calc() with variables for dynamic sizing
+        - Create component-specific variable overrides
+        - Implement a color scheme that changes based on user preference
+
+        START YOUR CODE BELOW THIS COMMENT:
+        */
+
+        /* TODO: Add your CSS variables and styling here */
+
+    </style>
+</head>
+<body>
+    <!-- Theme Toggle Button -->
+    <button id="themeToggle" class="theme-toggle">🌙 Dark Theme</button>
+
+    <!-- Main Container -->
+    <div class="container">
+        <h1 class="main-title">CSS Variables Challenge</h1>
+        <p class="description">Complete the CSS to make this layout work with custom properties!</p>
+
+        <!-- Card Grid -->
+        <div class="card-grid">
+            <div class="card">
+                <h2 class="card-title">Feature Card 1</h2>
+                <p class="card-text">This card should use CSS variables for consistent theming across the application.</p>
+                <button class="btn btn-primary">Primary Action</button>
+            </div>
+
+            <div class="card">
+                <h2 class="card-title">Feature Card 2</h2>
+                <p class="card-text">Notice how the theme changes affect all elements that use the CSS custom properties.</p>
+                <button class="btn btn-secondary">Secondary Action</button>
+            </div>
+
+            <div class="card special-card">
+                <h2 class="card-title">Special Card</h2>
+                <p class="card-text">This card has component-specific variable overrides for unique styling.</p>
+                <button class="btn btn-primary">Special Action</button>
+            </div>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="stats-section">
+            <div class="stat-item">
+                <div class="stat-number">42</div>
+                <div class="stat-label">Projects</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">128</div>
+                <div class="stat-label">Variables</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">99%</div>
+                <div class="stat-label">Consistency</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-theme');
+            themeToggle.textContent = body.classList.contains('dark-theme')
+                ? '☀️ Light Theme'
+                : '🌙 Dark Theme';
+        });
+    </script>
+</body>
+</html>

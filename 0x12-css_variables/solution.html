@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables Solution</title>
+    <style>
+        /* CSS VARIABLES SOLUTION */
+
+        /* 1. Global CSS Variables in :root */
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #e74c3c;
+            --background-color: #f8f9fa;
+            --text-color: #2c3e50;
+            --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --border-radius: 8px;
+            --font-family: 'Arial, sans-serif';
+            --spacing-unit: 16px;
+
+            /* Additional variables for enhanced design */
+            --card-background: #ffffff;
+            --hover-transform: translateY(-2px);
+            --transition-speed: 0.3s;
+            --container-max-width: 1200px;
+        }
+
+        /* 2. Dark Theme Variable Overrides */
+        .dark-theme {
+            --primary-color: #2980b9;
+            --secondary-color: #c0392b;
+            --background-color: #2c3e50;
+            --text-color: #ecf0f1;
+            --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            --card-background: #34495e;
+        }
+
+        /* 3. Base Styles Using Variables */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            font-family: var(--font-family);
+            line-height: 1.6;
+            transition: background-color var(--transition-speed), color var(--transition-speed);
+        }
+
+        /* Theme Toggle Button */
+        .theme-toggle {
+            position: fixed;
+            top: var(--spacing-unit);
+            right: var(--spacing-unit);
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: calc(var(--spacing-unit) * 0.5) var(--spacing-unit);
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 14px;
+            z-index: 1000;
+            transition: all var(--transition-speed);
+        }
+
+        .theme-toggle:hover {
+            background: var(--secondary-color);
+            transform: var(--hover-transform);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: var(--container-max-width);
+            margin: 0 auto;
+            padding: calc(var(--spacing-unit) * 3) var(--spacing-unit);
+        }
+
+        /* Typography */
+        .main-title {
+            font-size: calc(var(--spacing-unit) * 2.5);
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: var(--spacing-unit);
+            font-weight: 700;
+        }
+
+        .description {
+            text-align: center;
+            margin-bottom: calc(var(--spacing-unit) * 3);
+            font-size: calc(var(--spacing-unit) * 1.125);
+            opacity: 0.8;
+        }
+
+        /* Card Grid Layout */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: calc(var(--spacing-unit) * 1.5);
+            margin-bottom: calc(var(--spacing-unit) * 3);
+        }
+
+        /* Card Styling */
+        .card {
+            background: var(--card-background);
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+            padding: calc(var(--spacing-unit) * 1.5);
+            transition: all var(--transition-speed);
+            border: 1px solid transparent;
+        }
+
+        .card:hover {
+            transform: var(--hover-transform);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Component-specific variable override for special card */
+        .special-card {
+            --primary-color: #9b59b6;
+            --secondary-color: #8e44ad;
+            border: 2px solid var(--primary-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .special-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+        }
+
+        .card-title {
+            color: var(--primary-color);
+            font-size: calc(var(--spacing-unit) * 1.25);
+            margin-bottom: calc(var(--spacing-unit) * 0.75);
+            font-weight: 600;
+        }
+
+        .card-text {
+            margin-bottom: calc(var(--spacing-unit) * 1.25);
+            line-height: 1.7;
+        }
+
+        /* Button Styles */
+        .btn {
+            padding: calc(var(--spacing-unit) * 0.75) calc(var(--spacing-unit) * 1.5);
+            border: none;
+            border-radius: calc(var(--border-radius) * 0.75);
+            font-family: var(--font-family);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all var(--transition-speed);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: calc(var(--spacing-unit) * 0.875);
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--secondary-color);
+            transform: var(--hover-transform);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--secondary-color);
+            border: 2px solid var(--secondary-color);
+        }
+
+        .btn-secondary:hover {
+            background: var(--secondary-color);
+            color: white;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-unit);
+            background: var(--card-background);
+            border-radius: var(--border-radius);
+            padding: calc(var(--spacing-unit) * 2);
+            box-shadow: var(--card-shadow);
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: var(--spacing-unit);
+        }
+
+        .stat-number {
+            font-size: calc(var(--spacing-unit) * 3);
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: calc(var(--spacing-unit) * 0.5);
+        }
+
+        .stat-label {
+            color: var(--text-color);
+            opacity: 0.7;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: calc(var(--spacing-unit) * 0.875);
+        }
+
+        /* Advanced CSS Variables Usage Examples */
+
+        /* Using calc() with variables */
+        @media (max-width: 768px) {
+            :root {
+                --spacing-unit: 14px; /* Smaller spacing on mobile */
+            }
+
+            .container {
+                padding: calc(var(--spacing-unit) * 2) var(--spacing-unit);
+            }
+
+            .card-grid {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-unit);
+            }
+        }
+
+        /* Contextual variable usage */
+        .card:focus-within {
+            --card-shadow: 0 0 0 3px var(--primary-color);
+            outline: none;
+        }
+
+        /* CSS Variables for animations */
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.8;
+                transform: scale(1.05);
+            }
+        }
+
+        .btn:active {
+            animation: pulse calc(var(--transition-speed) * 0.5) ease-in-out;
+        }
+
+        /* Fallback values demonstration */
+        .theme-toggle {
+            background: var(--accent-color, var(--primary-color)); /* Fallback to primary if accent doesn't exist */
+        }
+
+        /* Using CSS Variables with gradients */
+        .special-card {
+            background: linear-gradient(
+                135deg,
+                var(--card-background) 0%,
+                color-mix(in srgb, var(--card-background) 95%, var(--primary-color) 5%) 100%
+            );
+        }
+    </style>
+</head>
+<body>
+    <!-- Theme Toggle Button -->
+    <button id="themeToggle" class="theme-toggle">🌙 Dark Theme</button>
+
+    <!-- Main Container -->
+    <div class="container">
+        <h1 class="main-title">CSS Variables Solution</h1>
+        <p class="description">This is the complete solution showing the power of CSS Custom Properties!</p>
+
+        <!-- Card Grid -->
+        <div class="card-grid">
+            <div class="card">
+                <h2 class="card-title">Feature Card 1</h2>
+                <p class="card-text">This card uses CSS variables for consistent theming. Notice how all colors, spacing, and effects are controlled by custom properties.</p>
+                <button class="btn btn-primary">Primary Action</button>
+            </div>
+
+            <div class="card">
+                <h2 class="card-title">Feature Card 2</h2>
+                <p class="card-text">The theme toggle demonstrates how CSS variables can be overridden at runtime for dynamic theming without JavaScript style manipulation.</p>
+                <button class="btn btn-secondary">Secondary Action</button>
+            </div>
+
+            <div class="card special-card">
+                <h2 class="card-title">Special Card</h2>
+                <p class="card-text">This card showcases component-specific variable overrides, creating unique styling while maintaining consistency.</p>
+                <button class="btn btn-primary">Special Action</button>
+            </div>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="stats-section">
+            <div class="stat-item">
+                <div class="stat-number">42</div>
+                <div class="stat-label">Projects</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">128</div>
+                <div class="stat-label">Variables</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">99%</div>
+                <div class="stat-label">Consistency</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+
+        // Check for saved theme preference or default to light theme
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        if (currentTheme === 'dark') {
+            body.classList.add('dark-theme');
+            themeToggle.textContent = '☀️ Light Theme';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-theme');
+            const isDark = body.classList.contains('dark-theme');
+
+            themeToggle.textContent = isDark ? '☀️ Light Theme' : '🌙 Dark Theme';
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+
+        // Demonstrate dynamic CSS variable modification
+        const cards = document.querySelectorAll('.card');
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                // Temporarily modify CSS variables on hover
+                card.style.setProperty('--card-shadow', '0 12px 24px rgba(0, 0, 0, 0.2)');
+            });
+
+            card.addEventListener('mouseleave', () => {
+                // Reset to default
+                card.style.removeProperty('--card-shadow');
+            });
+        });
+    </script>
+</body>
+</html>
