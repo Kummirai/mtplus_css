@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pseudo-classes & Pseudo-elements Challenge</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    a {
+      text-decoration: none;
+      color: blue;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    /*
+      🧠 Challenge: Add the following CSS using Pseudo-classes and Pseudo-elements ONLY!
+
+      1. Style the <a> tag:
+        - When hovered, it should turn red.
+        - When visited, it should turn purple.
+
+      2. Style the <button>:
+        - When hovered, change its background color to lightgreen.
+        - When active (clicked), change background to darkgreen and text color to white.
+
+      3. Style the <ul> list items:
+        - Use :nth-child(even) to give even items a light gray background.
+        - Use :first-child and :last-child to make the first item bold and the last item italic.
+
+      4. Use ::before and ::after to enhance the heading:
+        - Add a star symbol ⭐ before and after the <h2> tag using ::before and ::after.
+        - Style the stars with a gold color and some spacing.
+
+      5. Use ::first-letter and ::first-line on the paragraph:
+        - Make the first letter of the paragraph big and red.
+        - Make the first line of the paragraph bold and blue.
+    */
+  </style>
+</head>
+<body>
+
+  <h2>Welcome to the Challenge</h2>
+
+  <p>
+    This paragraph is your playground. Use pseudo-elements to enhance its first letter and first line for styling.
+  </p>
+
+  <a href="#">Visit this link</a>
+
+  <br><br>
+
+  <button>Click Me</button>
+
+  <h3>Shopping List</h3>
+  <ul>
+    <li>Apples</li>
+    <li>Bananas</li>
+    <li>Oranges</li>
+    <li>Grapes</li>
+    <li>Watermelon</li>
+  </ul>
+
+</body>
+</html>

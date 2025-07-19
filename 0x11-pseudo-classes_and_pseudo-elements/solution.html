@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pseudo-classes & Pseudo-elements Solution</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    /* Anchor pseudo-classes */
+    a {
+      text-decoration: none;
+      color: blue;
+    }
+
+    a:hover {
+      color: red;
+    }
+
+    a:visited {
+      color: purple;
+    }
+
+    /* Button pseudo-classes */
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: white;
+      border: 1px solid #ccc;
+    }
+
+    button:hover {
+      background-color: lightgreen;
+    }
+
+    button:active {
+      background-color: darkgreen;
+      color: white;
+    }
+
+    /* List item pseudo-classes */
+    ul li:nth-child(even) {
+      background-color: #f0f0f0;
+    }
+
+    ul li:first-child {
+      font-weight: bold;
+    }
+
+    ul li:last-child {
+      font-style: italic;
+    }
+
+    /* Heading pseudo-elements */
+    h2::before {
+      content: "⭐ ";
+      color: gold;
+    }
+
+    h2::after {
+      content: " ⭐";
+      color: gold;
+    }
+
+    /* Paragraph pseudo-elements */
+    p::first-letter {
+      font-size: 200%;
+      color: red;
+    }
+
+    p::first-line {
+      font-weight: bold;
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Welcome to the Challenge</h2>
+
+  <p>
+    This paragraph is your playground. Use pseudo-elements to enhance its first letter and first line for styling.
+  </p>
+
+  <a href="#">Visit this link</a>
+
+  <br><br>
+
+  <button>Click Me</button>
+
+  <h3>Shopping List</h3>
+  <ul>
+    <li>Apples</li>
+    <li>Bananas</li>
+    <li>Oranges</li>
+    <li>Grapes</li>
+    <li>Watermelon</li>
+  </ul>
+
+</body>
+</html>
