@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors Challenge - Solution</title>
+    <style>
+        /* Solution */
+        h1 {
+            color: coral;
+        }
+
+        .highlight {
+            background-color: lightyellow;
+        }
+
+        #special {
+            border: 1px dotted black;
+        }
+
+        div p {
+            color: blue;
+        }
+
+        ul li {
+            color: green;
+        }
+
+        h1 + p, h2 + p {
+            color: red;
+        }
+
+        a:hover {
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <h1>Main Heading</h1>
+    <p>This paragraph should be red (first after heading)</p>
+
+    <div>
+        <h2>Subheading</h2>
+        <p>This paragraph should be blue (inside div)</p>
+        <p class="highlight">This should have lightyellow background</p>
+    </div>
+
+    <ul>
+        <li>First item (should be green)</li>
+        <li>Second item (should be green)</li>
+        <li id="special">Special item (should have dotted border)</li>
+    </ul>
+
+    <p>Regular paragraph</p>
+    <p class="highlight">Another highlighted paragraph</p>
+
+    <a href="#">Hover over this link</a>
+</body>
+</html>
