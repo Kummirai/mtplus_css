@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Layout Solution</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #1e90ff;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .sidebar, .main {
+      padding: 20px;
+      background-color: #f4f4f4;
+      border-radius: 5px;
+    }
+
+    .sidebar {
+      flex: 1;
+    }
+
+    .main {
+      flex: 3;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+
+    /* ========== MEDIA QUERIES FOR RESPONSIVENESS ========== */
+
+    /* For tablets and below (≤768px) */
+    @media screen and (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      header {
+        text-align: center;
+        padding: 10px;
+      }
+    }
+
+    /* For phones and below (≤480px) */
+    @media screen and (max-width: 480px) {
+      body {
+        font-size: 14px;
+      }
+
+      footer {
+        background-color: #555;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Responsive Design Challenge</h1>
+  </header>
+
+  <div class="container">
+    <div class="sidebar">
+      <h2>Sidebar</h2>
+      <p>This is the sidebar content.</p>
+    </div>
+    <div class="main">
+      <h2>Main Content</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis vulputate lorem.</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Responsive Web</p>
+  </footer>
+
+</body>
+</html>

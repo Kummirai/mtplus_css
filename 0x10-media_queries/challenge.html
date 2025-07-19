@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Layout Challenge</title>
+  <style>
+    /* ========== BASE STYLES ==========
+       DO NOT add media queries here. Only use these as your base styles.
+    */
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #1e90ff;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .sidebar, .main {
+      padding: 20px;
+      background-color: #f4f4f4;
+      border-radius: 5px;
+    }
+
+    .sidebar {
+      flex: 1;
+    }
+
+    .main {
+      flex: 3;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+
+    /* ========== CHALLENGE: ADD MEDIA QUERIES BELOW ==========
+
+      🎯 Your task: Make this layout responsive using media queries.
+
+      📱 For screen widths 768px or less:
+        1. Stack the sidebar above the main content (change .container to column layout).
+        2. Center align the header text.
+        3. Reduce header padding to 10px.
+
+      📱 For screen widths 480px or less:
+        4. Reduce font-size of the body text to 14px.
+        5. Change footer background color to #555.
+
+      💡 Tip: Use @media screen and (max-width: ...) { ... }
+    */
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Responsive Design Challenge</h1>
+  </header>
+
+  <div class="container">
+    <div class="sidebar">
+      <h2>Sidebar</h2>
+      <p>This is the sidebar content.</p>
+    </div>
+    <div class="main">
+      <h2>Main Content</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis vulputate lorem.</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Responsive Web</p>
+  </footer>
+
+</body>
+</html>
