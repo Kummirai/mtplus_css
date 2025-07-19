@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Colors, Backgrounds & Borders Solution</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: rgb(0, 0, 139);
+            text-decoration: underline;
+            text-decoration-skip-ink: auto;
+        }
+
+        .color-box {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(to right, #ff9966, #ff5e62);
+            border: 3px solid #333;
+            border-radius: 50%;
+            margin: 20px 0;
+        }
+
+        p {
+            color: hsl(0, 0%, 30%);
+            border-left: 4px solid #4CAF50;
+            padding-left: 10px;
+        }
+
+        .action-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .action-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CSS Colors & Backgrounds</h1>
+        <div class="color-box"></div>
+        <p>This is a demonstration of how to use colors, backgrounds, and borders in CSS. Try styling these elements according to the instructions.</p>
+        <button class="action-btn">Hover Me</button>
+    </div>
+</body>
+</html>
