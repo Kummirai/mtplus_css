@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model Solution</title>
+    <style>
+        .main-box {
+            background-color: lightblue;
+            border: 4px dashed green;
+            padding: 15px 25px;
+            margin: 20px auto;
+            width: 342px; /* 400 - (25*2 padding) - (4*2 border) */
+            box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+        }
+
+        .inner-box {
+            border: 2px solid blue;
+            padding: 10px;
+            margin: 15px 0;
+            background-color: #f0f8ff;
+            width: auto;
+        }
+
+        .button {
+            border: 1px solid #555;
+            padding: 8px 16px;
+            margin-right: 10px;
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+            cursor: pointer;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            border-bottom: 1px solid gray;
+            padding-bottom: 10px;
+            margin-top: 20px;
+        }
+
+        .button:last-child {
+            margin-right: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Advanced CSS Box Model Challenge</h1>
+    <div class="main-box">
+        <h2>Container Title</h2>
+        <div class="inner-box">
+            This is the inner container with more content to demonstrate nested box model properties.
+        </div>
+        <button class="button">Button 1</button>
+        <button class="button">Button 2</button>
+        <button class="button">Button 3</button>
+    </div>
+</body>
+</html>
