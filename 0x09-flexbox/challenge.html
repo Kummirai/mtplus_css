@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox Challenge</title>
+    <style>
+        /*
+        =============================================
+        FLEXBOX CHALLENGE INSTRUCTIONS:
+        =============================================
+
+        GOAL: Create a responsive navigation bar and a flexible card layout using Flexbox.
+
+        PART 1: NAVIGATION BAR (Flex Container)
+        --------------------------------------
+        1. The <nav> should be a flex container:
+           - Items should be horizontally centered.
+           - Space should be distributed evenly between them.
+           - The navbar should have a dark background (#333) and white text.
+
+        2. The links (<a>) inside the navbar should:
+           - Have padding (1rem).
+           - No underline (text-decoration: none).
+           - Change color on hover (e.g., lightblue).
+
+        PART 2: CARD LAYOUT (Flex Container & Items)
+        --------------------------------------------
+        1. The <div class="card-container"> should:
+           - Be a flex container.
+           - Wrap items to the next row if needed.
+           - Have a gap of 20px between cards.
+           - Center items along the cross-axis (vertically).
+
+        2. Each <div class="card"> should:
+           - Have a fixed width (250px) but grow if needed.
+           - Have padding (1rem), a border, and a shadow.
+           - Display its content in a column (flex-direction: column).
+           - Space content evenly inside the card.
+
+        3. The button inside each card should:
+           - Align itself at the bottom of the card (margin-top: auto).
+           - Have a hover effect (e.g., background color change).
+
+        BONUS (Optional):
+        - Make the navbar stack vertically on small screens (media query).
+        =============================================
+        */
+
+        /* Write your Flexbox solution below this line */
+
+    </style>
+</head>
+<body>
+    <!-- PART 1: NAVIGATION BAR -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <!-- PART 2: CARD LAYOUT -->
+    <div class="card-container">
+        <div class="card">
+            <h3>Card 1</h3>
+            <p>This is a flexbox card example.</p>
+            <button>Click Me</button>
+        </div>
+        <div class="card">
+            <h3>Card 2</h3>
+            <p>Flexbox makes layouts easier!</p>
+            <button>Click Me</button>
+        </div>
+        <div class="card">
+            <h3>Card 3</h3>
+            <p>Responsive design with Flexbox.</p>
+            <button>Click Me</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox Solution</title>
+    <style>
+        /* PART 1: NAVIGATION BAR (Flex Container) */
+        nav {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 1rem;
+        }
+
+        nav a:hover {
+            color: lightblue;
+        }
+
+        /* PART 2: CARD LAYOUT (Flex Container & Items) */
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            width: 250px;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .card button {
+            margin-top: auto;
+            padding: 0.5rem;
+            background: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .card button:hover {
+            background: #555;
+        }
+
+        /* BONUS: Responsive Navbar */
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- PART 1: NAVIGATION BAR -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <!-- PART 2: CARD LAYOUT -->
+    <div class="card-container">
+        <div class="card">
+            <h3>Card 1</h3>
+            <p>This is a flexbox card example.</p>
+            <button>Click Me</button>
+        </div>
+        <div class="card">
+            <h3>Card 2</h3>
+            <p>Flexbox makes layouts easier!</p>
+            <button>Click Me</button>
+        </div>
+        <div class="card">
+            <h3>Card 3</h3>
+            <p>Responsive design with Flexbox.</p>
+            <button>Click Me</button>
+        </div>
+    </div>
+</body>
+</html>

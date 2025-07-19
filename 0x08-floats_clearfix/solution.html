@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Floats & Clearfix Solution</title>
+    <style>
+        /* Float the boxes */
+        .float-left {
+            float: left;
+            width: 40%;
+            padding: 10px;
+        }
+
+        /* Box styling */
+        .float-left:nth-child(1) {
+            background-color: lightblue;
+        }
+
+        .float-left:nth-child(2) {
+            background-color: lightcoral;
+        }
+
+        /* Footer styling */
+        .footer {
+            background-color: gray;
+            padding: 20px;
+            text-align: center;
+            clear: both; /* Clear floats */
+        }
+
+        /* Clearfix hack (prevents container collapse) */
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="container clearfix">
+        <div class="float-left">Box 1 (Float Left)</div>
+        <div class="float-left">Box 2 (Float Left)</div>
+    </div>
+    <div class="footer">Footer (Cleared floats)</div>
+</body>
+</html>
