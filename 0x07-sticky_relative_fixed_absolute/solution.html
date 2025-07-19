@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioning Solution</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            height: 500px;
+            border: 2px dashed #333;
+            position: relative; /* Context for absolute positioning */
+            margin: 20px;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .static {
+            background-color: #3498db;
+            position: static; /* Default (no positioning) */
+        }
+
+        .relative {
+            background-color: #2ecc71;
+            position: relative;
+            top: 20px;
+            left: 30px;
+        }
+
+        .absolute {
+            background-color: #e74c3c;
+            position: absolute;
+            bottom: 50px;
+            right: 50px;
+        }
+
+        .fixed {
+            background-color: #f39c12;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+        }
+
+        .sticky {
+            background-color: #9b59b6;
+            position: sticky;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box static">Static</div>
+        <div class="box relative">Relative</div>
+        <div class="box absolute">Absolute</div>
+        <div class="box fixed">Fixed</div>
+        <div class="box sticky">Sticky</div>
+    </div>
+    <div style="height: 1000px;">Scroll to see sticky and fixed behavior.</div>
+</body>
+</html>

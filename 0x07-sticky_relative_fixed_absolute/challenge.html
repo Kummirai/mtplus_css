@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioning Challenge</title>
+    <style>
+        /*
+        CHALLENGE INSTRUCTIONS:
+
+        1. Create a container with 5 nested boxes, each demonstrating a different position property:
+           - Box 1: Static (default, no positioning needed)
+           - Box 2: Relative (offset 20px from top, 30px from left)
+           - Box 3: Absolute (positioned inside a "relative" parent, 50px from bottom, 50px from right)
+           - Box 4: Fixed (stays at top-right of the viewport, 20px from top & right)
+           - Box 5: Sticky (sticks to top: 0 when scrolling)
+
+        2. Style them as follows:
+           - All boxes: 100px width & height, different background colors, 5px margin.
+           - Container: 500px height (to allow scrolling), dashed border, relative positioning (for context).
+
+        3. Observe how each positioning method affects layout behavior.
+        */
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Write your solution below this line */
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box static">Static</div>
+        <div class="box relative">Relative</div>
+        <div class="box absolute">Absolute</div>
+        <div class="box fixed">Fixed</div>
+        <div class="box sticky">Sticky</div>
+    </div>
+    <div style="height: 1000px;">Scroll to see sticky and fixed behavior.</div>
+</body>
+</html>
