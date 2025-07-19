@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Shadows & Gradients Solution</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background: radial-gradient(ellipse, #f5f7fa, #c3cfe2);
+        }
+
+        /* 1️⃣ Box Shadow (Card) */
+        .card {
+            width: 300px;
+            height: 200px;
+            background: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* 2️⃣ Text Shadow (Heading) */
+        .fancy-heading {
+            color: #333;
+            text-shadow:
+                2px 2px 4px rgba(0, 0, 0, 0.3),
+                -2px -2px 4px rgba(255, 255, 255, 0.3);
+        }
+
+        /* 3️⃣ Linear Gradient (Button) */
+        .gradient-btn {
+            width: 200px;
+            height: 50px;
+            border: none;
+            border-radius: 25px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            transition: background 0.3s ease;
+        }
+
+        .gradient-btn:hover {
+            background: linear-gradient(to left, #ff7e5f, #feb47b);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">Hover Me!</div>
+    <h1 class="fancy-heading">CSS Shadows & Gradients</h1>
+    <button class="gradient-btn">Click Me</button>
+</body>
+</html>

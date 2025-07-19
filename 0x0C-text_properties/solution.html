@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Text Properties Solution</title>
+    <style>
+        /* HEADER (h1) */
+        h1 {
+            text-align: center;
+            text-decoration: underline dotted purple 3px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+
+        /* PARAGRAPH (p) */
+        p {
+            text-align: justify;
+            line-height: 1.5;
+            text-indent: 30px;
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        /* SPAN (span) */
+        span {
+            text-decoration: overline;
+            font-weight: bold;
+            text-transform: lowercase;
+            margin-right: 10px;
+        }
+
+        /* LINK (a) */
+        a {
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        a:hover {
+            color: #FF5733;
+        }
+        a:focus {
+            font-style: italic;
+        }
+
+        /* BONUS: Pseudo-element for link */
+        a:hover::after {
+            content: " ↗";
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Text Styling Challenge</h1>
+    <p>
+        This is a sample paragraph to demonstrate advanced text styling in CSS.
+        Notice how justification affects the spacing between words.
+        <span>THIS SPAN SHOULD BE LOWERCASE DESPITE UPPERCASE HTML</span>.
+        The goal is to make this text visually appealing using alignment, decoration, and transformation properties.
+    </p>
+    <a href="#">Hover Over This Link</a>
+</body>
+</html>
